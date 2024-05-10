@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div</title>
+    <link rel="stylesheet" href="./estilos/style.css">
+</head>
+<body>
+    <div class="div" id="div">
+
+    </div>
+    <script>
+        const nombre = localStorage.getItem("nombre");
+        const apellido = localStorage.getItem("apellido");
+        const direccion = localStorage.getItem("direccion");
+        const codigoPostal = localStorage.getItem("codigoPostal");
+        const profesion = localStorage.getItem("profesion");
+        const campoProfesion = localStorage.getItem("campoProfesion");
+        const email = localStorage.getItem("email");
+
+        alert("Valores del formulario: \n"+
+            "Nombre: "+ nombre + "\n" +
+            "Apellido: " + apellido + "\n" +
+            "Direccion: "+ direccion + "\n" +
+            "Codigo Postal: "+codigoPostal+"\n"+
+            "Profesion: "+profesion+"\n"+
+            "Categoria: "+campoProfesion+"\n"+
+            "Email: "+email
+        );
+
+        const div = document.getElementById("div");
+        div.innerHTML = `
+            <p>Nombre: ${nombre}</p>
+            <p>Apellido: ${apellido}</p>
+            <p>Direccion: ${direccion}</p>
+            <p>Codigo Postal: ${codigoPostal}</p>
+            <p>Profeson: ${profesion}</p>
+            <p>Categoria: ${campoProfesion}</p>
+            <p>Email: ${email}</p>
+        `;
+    </script>
+</body>
+</html>
